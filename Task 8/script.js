@@ -5,30 +5,25 @@ subtraction(a, b) - priima du skaičius ir grąžina jų skirtumą.
 multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
-class Calculator {
-    constructor() {
-        this.a = 20;
-        this.b = 30;
-        this.getSum = (a, b) => {
-            return `Sum: ${this.a + this.b} `;
-        };
-
-        this.getSubtraction = (a, b) => {
-            return `Subtraction: ${this.a - this.b}`;
-        };
-
-        this.getMultiplication = (a, b) => {
-            return `Multiplication: ${this.a * this.b}`;
-        };
-
-        this.getDivision = (a, b) => {
-            return `Division: ${this.a / this.b}`;
-        };
-    }
-}
-
-const calculation = new Calculator();
-console.log(calculation.getSum());
-console.log(calculation.getSubtraction());
-console.log(calculation.getMultiplication());
-console.log(calculation.getDivision());
+function Calculator(num1, num2) {
+    this.numberFirst = num1;
+    this.numberSecond = num2;
+    this.sum = () => {
+      return this.numberFirst + this.numberSecond;
+    };
+    this.subtraction = () => {
+      return this.numberFirst - this.numberSecond;
+    };
+    this.multiplication = () => {
+      return this.numberFirst * this.numberSecond;
+    };
+    this.division = () => {
+      return this.numberFirst / this.numberSecond;
+    };
+  }
+  const numberArr = new Calculator(3, 8);
+  
+  console.log(numberArr.sum());
+  //console.log(numberArr.subtraction());
+  //console.log(numberArr.multiplication());
+  //console.log(numberArr.division());

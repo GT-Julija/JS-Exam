@@ -13,7 +13,10 @@ const ENDPOINT = "cars.json";
 
 const renderCard = (brand) => {
   const card = document.createElement("div");
-  const brandNameEl = document.createElement("h2");
+  
+const brandNameEl = document.createElement("h2");
+brandNameEl.style.textAlign = "center";
+
   const listEl = document.createElement("ul");
 
   brandNameEl.textContent = brand.brand;

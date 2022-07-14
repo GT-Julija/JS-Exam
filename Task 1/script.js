@@ -21,8 +21,9 @@ converterForm.addEventListener("submit", (event) => {
   const output = document.getElementById("output");
   output.textContent = `Pounds: ${pounds}, Grams: ${grams}, Ounces: ${ounces}`;
   output.style.color = "white";
+  output.style.fontSize = "36px";
+  output.style.textAlign = "center";
   
-
 });
 
 function kilogramsToPounds(kilograms) {
